@@ -6,6 +6,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     @Override
@@ -54,11 +59,33 @@ public class MainActivity extends AppCompatActivity {
         super.onStart();
         Log.d("MCK","OnStart_Bize her yer Trabzon");
     }
+    Button btn;
+    TextView tv;
+    EditText et;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        btn=(Button) findViewById(R.id.button);
+        tv=(TextView) findViewById(R.id.tvLabl1);
+        et=(EditText) findViewById(R.id.editTextTextPersonName);
+
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                tv.setText(et.getText().toString());
+
+            }
+        });
         Log.d("MCK","OnCreate_Bize her yer Trabzon");
     }
+
+    public  void ClickMe(View  v){
+
+        Toast.makeText(MainActivity.this,"2Bize her yer Trabzon ",Toast.LENGTH_LONG).show();
+        Log.d("MCK","clickme_ her yer Trabzon");
+    }
+
+
 }

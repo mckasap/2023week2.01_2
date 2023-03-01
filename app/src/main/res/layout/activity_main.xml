@@ -16,13 +16,14 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
+            android:id="@+id/tvLabl1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="Hello World!"
             android:textAlignment="center"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
 
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -37,7 +38,16 @@
             android:id="@+id/button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="ClickMe"
             android:text="Button" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName"
+            android:hint="Adinizi giriniz"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ems="10"
+            android:inputType="textPersonName" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
